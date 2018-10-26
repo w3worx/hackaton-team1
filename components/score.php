@@ -1,7 +1,8 @@
 <section id="score">
   <div class="image">
-    <img src="https://hackaton.w3worx.nl/team1/upload/<?php echo $_GET['filename']; ?>" alt="">
+    <img src="style/public/images/confetti.png" alt="">
   </div>
-  <div class="score">Your mark: <?php echo $_GET['score']; ?></div>
-  <div class="score">Today's winner: Gerwald</div>
+
+  <div class="score">Your mark: 7<?php echo $_GET['score']; ?></div>
+  <h1>Today's winner:<br><span>Gerwald</span></h1>
 </section>
