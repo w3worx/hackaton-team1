@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-<<<<<<< HEAD
 
   $('#take-photo').on('submit', function(e){
 
@@ -43,8 +42,6 @@ $(document).ready(function(){
 
   }, 0)
 
-=======
->>>>>>> 827b316c3bcfa57269b29fcd8445a8a3c8bb0ed8
 });
 
 
