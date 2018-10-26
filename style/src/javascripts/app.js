@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+<<<<<<< HEAD
 
   $('#take-photo').on('submit', function(e){
 
@@ -42,9 +43,23 @@ $(document).ready(function(){
 
   }, 0)
 
+=======
+>>>>>>> 827b316c3bcfa57269b29fcd8445a8a3c8bb0ed8
 });
 
 
 function proceedUpload(data){
-  console.log('filename:'+data);
+  var url = data;
+  $.ajax({
+    type: "get",
+    url: "https://hackaton.w3worx.nl/team1/php/connector.php",
+    data: "action=ratePicture&filename="+data+"&userId=1",
+    dataType: 'json',
+    success: function ( response ) {
+      window.location.href = 'page-score.php?score='+response.score+'&filename='+url;
+    },
+    error: function () {
+      ajaxLock = false;
+    }
+  });
 }

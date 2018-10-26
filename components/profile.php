@@ -23,6 +23,6 @@
         <?php echo $tips[rand(0,1)]; ?>
       </p>
     </div>
-    <a href="#" class="button green large">Sir yes sir</a>
+    <a href="page-photo.php" class="button green large">Sir yes sir</a>
   </div>
 </section>

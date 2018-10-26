@@ -2,7 +2,7 @@
     session_start();
     echo isset($_SESSION['login']);
     if(isset($_SESSION['login'])) {
-      header('LOCATION:profile.php'); die();
+      header('LOCATION:page-profile.php'); die();
     }
 ?>
 <!DOCTYPE html>
