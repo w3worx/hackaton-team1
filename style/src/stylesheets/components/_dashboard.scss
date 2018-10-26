@@ -1,0 +1,38 @@
+#dashboard {
+  width: 100%;
+  height: 100%;
+
+  ul {
+    @extend .reset;
+
+    li {
+      width: 100%;
+      position: relative;
+
+      .day {
+        background: $secondary-color;
+        padding: 15px 100px 15px 20px;
+        color: $white;
+        width: calc(100% - 80px);
+        position: relative;
+        height: 50px;
+        margin: 40px 40px;
+        border-radius: 3px;
+
+      }
+      .score {
+        background: $primary-color;
+        color: $white;
+        font-size: 2rem;
+        text-align: center;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 15px;
+        top: -5px;
+        padding-top: 10px;
+        border-radius: 100%;
+      }
+    }
+  }
+}
