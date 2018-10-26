@@ -1,6 +1,43 @@
 #photo {
-  background: $primary-color;
-  
+  background: url('../images/background.png');
+  text-align: center;
+
+  h1{
+    color: $gray-dark;
+    margin:0px 0 0 0;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+   
+  p{
+    font-weight: $font-weight-medium;
+  }
+
+  img{
+    margin:40px auto;
+    width: 200px;
+  }
+
+  .item{
+    margin: 0 auto;
+    text-align: center;
+    float:none;
+    margin-top:20px;
+  }
+  .time-left{
+    font-weight: $font-weight-medium;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .button{
+    position: absolute;
+    bottom:20px;
+    left:0;
+    right:0;
+    width: 90%;
+    margin:0 auto;
+  }
+
   .photo-button {
     padding: 40px 0;
     text-align: center;
