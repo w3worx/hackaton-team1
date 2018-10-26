@@ -1,7 +1,13 @@
 .box-shadow {
   box-shadow: 0px 5px 8px 1px rgba($gray-lighter, 1);
 }
-
+.back {
+  position: fixed;
+  top: 42px;
+  left: 20px;
+  font-size: 1.5rem;
+  color: $green;
+}
 .button.read-more {
   border: 1px solid $gray-lighter;
   font-weight: $font-weight-bold;

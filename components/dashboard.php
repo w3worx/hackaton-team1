@@ -1,6 +1,7 @@
 <div id="dashboard">
+  <a class="back" href="page-profile.php"><i class="fas fa-arrow-left"></i></a>
   <h1>Dashboard</h1>
-  <img src="style/public/images/current-rank.png" alt=""> 
+  <img src="style/public/images/current-rank.png" alt="">
   <ul>
     <li>
       <div class="day">Monday</div>

@@ -1,4 +1,5 @@
 <section id="team">
+  <a class="back" href="page-profile.php"><i class="fas fa-arrow-left"></i></a>
   <h1>Team w3worx</h1>
   <div class="avatars">
     <div class="avatar-holder">
