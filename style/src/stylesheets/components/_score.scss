@@ -1,0 +1,21 @@
+#score{
+  background: url('../images/background.png');
+  background-size: cover;
+  text-align: center;
+   
+  .score{
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+  }
+
+  img{
+    margin:30px auto;
+    width: 250px;
+
+  }
+
+  span{
+    color: $gray-dark;
+  }
+}
