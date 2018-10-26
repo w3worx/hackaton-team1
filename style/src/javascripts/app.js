@@ -1,29 +1,20 @@
 $(document).ready(function(){
 
-
-  $('#take-photo').on('submit', function(e){
-
-    // e.preventDefault();
-    // var file = $('input[name=file]').val();
-    //
-    // $.ajax({
-    //   type: "POST",
-    //   url: "https://hackaton.w3worx.nl/team1/php/connector.php",
-    //   data: "action=uploadPicture&file="+file,
-    //   dataType: 'json',
-    //   success: function ( response ) {
-    //     console.log(response);
-    //   },
-    //   error: function () {
-    //     ajaxLock = false;
-    //   }
-    // });
-
-  });
-
 });
 
 
 function proceedUpload(data){
-  console.log('filename:'+data);
+  var url = data;
+  $.ajax({
+    type: "get",
+    url: "https://hackaton.w3worx.nl/team1/php/connector.php",
+    data: "action=ratePicture&filename="+data+"&userId=1",
+    dataType: 'json',
+    success: function ( response ) {
+      window.location.href = 'page-score.php?score='+response.score+'&filename='+url;
+    },
+    error: function () {
+      ajaxLock = false;
+    }
+  });
 }
