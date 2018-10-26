@@ -1,6 +1,7 @@
 <div id="login">
 
   <div class="form">
+    <img src="style/public/images/logo.svg" alt="">
     <h1>Login</h1>
     <?php
       if(isset($_POST['submit'])){
@@ -16,7 +17,7 @@
     <form action="" method="POST">
       <input type="text" name="hank-username" placeholder="Username" autocomplete="off" autocomplete="false">
       <input type="password" name="hank-password" placeholder="Password" autocomplete="off">
-      <input type="submit" name="submit" value="login">
+      <input type="submit" name="submit" value="login" class="button green large">
     </form>
 
   </div>

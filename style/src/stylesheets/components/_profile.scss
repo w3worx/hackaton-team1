@@ -13,11 +13,34 @@
     display: flex;
   }
 
+  .badge{
+    position: absolute;
+    width:50%;
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:-40px;
+  }
 
   .tip {
     p {
       color: $black;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .flex-half.green{
+    position: relative !important;
+    background: url('../../public/images/background.png') !important;
+    background-size: cover;
+
+    a{
+      position: absolute;
+      bottom:20px;
+      left:0;
+      right:0;
+      width: 90%;
+      margin:0 auto;
     }
   }
 }

@@ -4,15 +4,24 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  background-image: url('../../public/images/background.png');
+  background-size: cover;
+
+  img{    
+    margin-bottom:35px;
+  }
 
   .form {
-    background: $primary-color;
-    max-width: 300px;
     padding: 40px;
     border-radius: 3px;
 
     h1 {
-      color: $white;
+      color: $primary-color;
+      margin-bottom:40px;
+    }
+
+    .button{
+      width: 100%;
     }
 
     input {
