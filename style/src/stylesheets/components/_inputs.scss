@@ -11,17 +11,28 @@ input {
   &[type=password],
   &[type=tel] {
     @extend %input-text;
+    padding:15px !important;
+    border-radius: 200px;
+    border-color: $secondary-color;
+    background: none;
+    max-width: 100%;
+    font-size: 12px;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
 
-    border-radius: 0;
-    border-color: $gray-lighter;
+    &:focus{
+      background:none;
+      border-color: $primary-color;
+    }
   }
 }
 
 //Textarea
 textarea {
-  border-color: $gray-lighter;
+  padding:15px !important;
+  border-color: $primary-color;
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 // Selects

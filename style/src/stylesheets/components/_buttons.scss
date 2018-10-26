@@ -7,5 +7,10 @@
   &.green {
     background: $primary-color;
     color: $white;
-  } 
+    border-color: $primary-color;
+  }
+
+  &.large{
+    padding:15px !important;
+  }
 }

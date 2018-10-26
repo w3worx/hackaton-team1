@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="482px" height="130px" viewBox="0 0 482 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="65" cy="65" r="65"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(-32.000000, -40.000000)">
+            <g transform="translate(32.000000, 40.000000)">
+                <g id="Group" transform="translate(156.000000, 35.000000)" fill="#FFFFFF">
+                    <text id="General-Hank" font-family="Rubik-Bold, Rubik" font-size="32" font-weight="bold" letter-spacing="7">
+                        <tspan x="0" y="30.5">GENERAL HANK</tspan>
+                    </text>
+                    <text id="The-Clean-Desk-Instr" font-family="Rubik-Regular, Rubik" font-size="16" font-weight="normal" letter-spacing="4">
+                        <tspan x="0" y="56">THE CLEAN DESK INSTRUCTO</tspan>
+                        <tspan x="315.744" y="56">R</tspan>
+                    </text>
+                </g>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#5EB6B1" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
