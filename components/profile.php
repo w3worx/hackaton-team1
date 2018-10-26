@@ -13,11 +13,16 @@
       <a href="page-dashboard.php" class="button green">My dashboard</a>
     </div>
   </div>
+
   <div class="flex-half green">
+    <div class="badge">
+      <img src="style/public/images/badge.png" alt="">
+    </div>
     <div class="tip">
       <p>
-        <?php echo $tips[rand(0,6)]; ?>
+        <?php echo $tips[rand(0,1)]; ?>
       </p>
     </div>
+    <a href="#" class="button green large">Sir yes sir</a>
   </div>
 </section>

@@ -1,5 +1,6 @@
 <div id="dashboard">
   <h1>Dashboard</h1>
+  <img src="style/public/images/current-rank.png" alt=""> 
   <ul>
     <li>
       <div class="day">Monday</div>
