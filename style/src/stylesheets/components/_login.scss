@@ -1,0 +1,23 @@
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  .form {
+    background: $primary-color;
+    max-width: 300px;
+    padding: 40px;
+    border-radius: 3px;
+
+    h1 {
+      color: $white;
+    }
+
+    input {
+      margin: 5px 0;
+      padding: 10px;
+    }
+  }
+}
