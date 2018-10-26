@@ -1,0 +1,23 @@
+#profile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .avatar-holder {
+    margin: 0 auto;
+  }
+
+  .button-group {
+    margin-top: 40px;
+    flex-direction: row;
+    display: flex;
+  }
+
+
+  .tip {
+    p {
+      color: $black;
+      font-size: 1.5rem;
+    }
+  }
+}

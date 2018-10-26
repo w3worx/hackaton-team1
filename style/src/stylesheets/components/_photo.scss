@@ -1,0 +1,29 @@
+#photo {
+
+  .photo-button {
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+
+    a {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background: $white;
+      display: inline-block;
+      margin: 0 auto;
+      position: relative;
+
+      &::after {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        content: '';
+        left: 8px;
+        top: 8px;
+        border: 2px solid #333;
+        border-radius: 100%;
+      }
+    }
+  }
+}

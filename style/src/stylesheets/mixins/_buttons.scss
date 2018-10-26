@@ -1,0 +1,98 @@
+// Buttons
+// --------------------------------------------------
+
+/// Sets the button base.
+@mixin button-base {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .75em 1em;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  -webkit-appearance: none;
+  font-weight: $font-weight-medium;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  outline: 0;
+  width: 160px;
+  margin: 0 5px;
+
+  text-align: center;
+  min-width: auto;
+
+  // If anchor used as button.
+  white-space: nowrap;
+  text-decoration: none !important;
+  line-height: initial;
+}
+
+/// Sets the visual style of a solid button.
+@mixin button-solid(
+  $background: $button-bg,
+  $background-hover: $button-hover-bg,
+  $color: $button-color
+) {
+  position: relative;
+  background-color: $background;
+  border-color: $background;
+  color: $color;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: $background-hover;
+    border-color: $background-hover;
+  }
+
+  &:focus {
+    background-color: darken($background-hover, 10%);
+    border-color: darken($background-hover, 10%);
+  }
+}
+
+/// Sets the visual style of a outline button.
+@mixin button-outline(
+  $background: $button-bg,
+  $background-hover: $button-hover-bg
+) {
+  background-color: transparent;
+  border-color: $background;
+  color: $background;
+
+  &:hover,
+  &:focus {
+    background-color: $background-hover;
+    border-color: $background-hover;
+    color: $white;
+  }
+
+  &:focus {
+    background-color: shade($background-hover, 10%);
+    border-color: shade($background-hover, 10%);
+  }
+}
+
+/// Adds all styles for a button.
+///
+/// @param {Color} $background [$button-bg] - Background color of the button.
+/// @param {Color} $background-hover [$button-hover-bg] - Background color of the button hover state.
+/// @param {Color} $color [$button-color] - Text color of the button.
+/// @param {Keyword} $style [solid] - Set to `outline` to create a outline button.
+
+@mixin button(
+  $background: $button-bg,
+  $background-hover: $button-hover-bg,
+  $color: $button-color,
+  $style: 'solid'
+) {
+  @include button-base;
+
+  @if $style == 'solid' {
+    @include button-solid($background, $background-hover, $color);
+  }
+  @else if $style == 'outline' {
+    @include button-outline($background, $background-hover);
+  }
+}

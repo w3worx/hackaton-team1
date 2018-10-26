@@ -1,0 +1,18 @@
+{
+  "name": "style",
+  "version": "1.0.0",
+  "description": "Styling for WP themes",
+  "main": "index.js",
+  "author": "Niels Buijtenhuis",
+  "license": "MIT",
+  "dependencies": {
+    "blendid": "^4.4.3",
+    "normalize-scss": "^7.0.1"
+  },
+  "scripts": {
+    "build": "yarn run blendid build",
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete",
+    "prestart": "yarn install",
+    "start": "yarn run blendid"
+  }
+}

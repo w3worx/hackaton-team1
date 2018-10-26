@@ -1,0 +1,40 @@
+// Extends
+// --------------------------------------------------
+
+// Inputs
+%input-text {
+  width: 100%;
+  max-width: 400px;
+  padding: .4em .4em;
+  border: 1px solid $gray-light;
+  background: $white;
+  color: $gray-light;
+  outline: 0;
+  border-radius: 5px;
+  font-size: .9rem;
+
+  &:focus {
+    border-color: $black;
+    background: $white;
+  }
+}
+
+// Selects
+%input-select {
+  width: 100%;
+  max-width: 400px;
+  background: $white url("../images/down-arrow.svg") no-repeat right 15px center;
+  background-size: 15px 15px;
+  appearance: none;
+  border: 2px solid $black;
+  outline: 0;
+  padding: .8em 1em;
+  line-height: normal;
+  border-radius: 5px;
+  font-size: 1.125rem;
+
+  &:focus {
+    background: $white url(../images/up-arrow.svg);
+    border-color: $black;
+  }
+}

@@ -1,0 +1,76 @@
+// Typography
+// --------------------------------------------------
+
+$font-family-base:    'Rubik', sans-serif;
+$font-family-heading: 'Rubik', sans-serif;
+
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+$font-weight-black:   900;
+
+$font-size-min:       14px;
+$font-size-max:       16px;
+$font-size-base:      1rem;
+$font-size-lg:        1.25rem;
+$font-size-sm:        0.875rem;
+$font-size-xs:        0.75rem;
+
+$line-height:         1.5;
+
+$gap:                 40px;
+
+// Colors
+// --------------------------------------------------
+
+$green-light:         #7BCDC8;
+$green:               #75C3BE;
+
+
+$white:               #fff;
+$black:               #272d33;
+$off-white:           #F5F5F5;
+
+$gray-darker:         #1B1E24;
+$gray-dark:           #252932;
+$gray:                #5D5E5E;
+$gray-light:          #787878;
+$gray-lighter:        #D8D8D8;
+$gray-lightest:       #F7F7F7;
+
+$body-bg:             $off-white;
+$body-color:          $black;
+$selection-bg:        $white;
+$selection-color:     $black;
+$link-color:          $black;
+$link-hover-color:    $gray-dark;
+
+$primary-color:       $green;
+$secondary-color:     $green-light;
+
+$succes:              #5cb85c;
+$warning:             #f0ad4e;
+$error:               #d9534f;
+
+// Buttons
+// --------------------------------------------------
+
+$button-bg:           $white;
+$button-hover-bg:     $off-white;
+$button-color:        $black;
+
+
+// Grid, Breakpoints & Widths
+// --------------------------------------------------
+
+$site-width:          100%;
+$site-min-width:      320px;
+$site-max-width:      1400px;
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px
+);

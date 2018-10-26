@@ -1,0 +1,70 @@
+@mixin grid($s: 1, $m: 2, $l: 4, $x: 4, $xl: 4, $gap: 20px) {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 1 auto;
+
+  > * {
+    flex: none;
+    margin-right: calc(#{$gap});
+    margin-bottom: calc(#{$gap});
+    width: calc((100% / #{$s}) - (#{$gap} * (#{$s} - 1) / #{$s}));
+
+    @include respond-below(sm) {
+      &:nth-child(#{$s}n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-between(sm, md) {
+      width: calc((100% / #{$m}) - (#{$gap} * (#{$m} - 1) / #{$m}));
+      &:nth-child(#{$m}n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-between(md, lg) {
+      width: calc((100% / #{$l}) - (#{$gap} * (#{$l} - 1) / #{$l}));
+      &:nth-child(#{$l}n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-between(lg, xl) {
+      width: calc((100% / #{$x}) - (#{$gap} * (#{$x} - 1) / #{$x}));
+      &:nth-child(#{$x}n) {
+        margin-right: 0;
+      }
+    }
+    @include respond-above(xl) {
+      width: calc((100% / #{$xl}) - (#{$gap} * (#{$xl} - 1) / #{$xl}));
+
+      &:nth-child(#{$xl}n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat($s, 1fr);
+    grid-gap: $gap;
+
+    @include respond-above(sm) {
+      grid-template-columns: repeat($m, 1fr);
+    }
+
+    @include respond-above(md) {
+      grid-template-columns: repeat($l, 1fr);
+    }
+
+    @include respond-above(lg) {
+      grid-template-columns: repeat($x, 1fr);
+    }
+
+    @include respond-above(xl) {
+      grid-template-columns: repeat($xl, 1fr);
+    }
+
+    > * {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

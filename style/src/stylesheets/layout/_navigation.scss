@@ -1,0 +1,315 @@
+nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40px;
+  z-index: 100;
+
+  .wrapper {
+    .menu-toggle {
+      display: none;
+    }
+
+    .off-canvas {
+      .main-menu {
+        float: right;
+        padding-right: 40px;
+
+        ul {
+          @extend .reset;
+
+          li {
+            float: left;
+            padding: 20px 20px 35px 20px;
+
+            a {
+              color: $white;
+              padding: 20px 0 5px 0;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 1.25rem;
+              font-weight: 600;
+            }
+
+            &.active {
+              a {
+                font-weight: $font-weight-black;
+                border-bottom: 3px solid $primary-color;
+              }
+            }
+          }
+        }
+      }
+
+      .nav-search {
+        float: right;
+        position: relative;
+
+        .toggle {
+          padding: 40px;
+          padding-right: 0;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          z-index: 1;
+
+          i {
+            color: $white;
+            font-size: 1.25rem;
+            line-height: 30px;
+          }
+
+          &.close {
+            opacity: 0;
+            right: 4px;
+            top: 0px;
+          }
+        }
+
+        form {
+          opacity: 0;
+          transition: opacity 400ms;
+          width: 500px;
+          float: left;
+          padding: 0 30px;
+          padding-right: 0;
+          position: absolute;
+          right: 0;
+          top: 80px;
+          z-index: -5;
+
+          input {
+            border: 0;
+            float: right;
+            background: $white;
+            padding-right: 40px;
+            height: 50px;
+            padding-left: 20px;
+
+            &::placeholder {
+              color: $gray-light;
+            }
+          }
+        }
+
+        &.open {
+          form {
+            opacity: 1;
+            z-index: 0;
+          }
+          .toggle {
+            &.close {
+              opacity: 1;
+            }
+            &.open {
+              right: 20px;
+              top: 50px;
+              i {
+                color: $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.relative {
+    position: relative;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  @include respond-below(lg) {
+    .wrapper {
+      .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 45;
+
+        .hamburger {
+          height: 16px;
+          width: 24px;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            position: relative;
+            width: 100%;
+            height: 2px;
+            background: $white;
+            transition: all 400ms;
+
+            &::before {
+              content: '';
+              position: absolute;
+              background: $white;
+              top: -7px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              background: $white;
+              top: 7px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+            }
+
+            &::before,
+            &::after {
+              transition-property: transform, top;
+              transition-duration:250ms, 250ms;
+              transition-delay:0s, 250ms;
+              transition-timing-funtion:linear;
+              transform-origin: center center;
+            }
+
+            &.close {
+              height: 0;
+              &::before {
+                top: -1px;
+                transform: rotate(45deg);
+              }
+              &::after {
+                top: -1px;
+                transform: rotate(-45deg);
+              }
+
+              &::before,
+              &::after {
+                transition-property: top, transform;
+              }
+            }
+          }
+        }
+
+        &.open {
+          right: auto;
+          left: 20px;
+        }
+      }
+
+      .off-canvas {
+        background: $white;
+        position: fixed;
+        z-index: 40;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+        transform: translateX(-100%);
+        transition: transform 400ms;
+
+        .main-menu {
+          margin-top: 40px;
+          padding: 20px 0;
+          width: 100%;
+
+          ul {
+            li {
+              float: left;
+              width: 100%;
+              padding: 15px;
+              border-bottom: 1px solid $gray-lighter;
+              background: url("../images/chevron-right.svg") no-repeat;
+              background-size: 8px;
+              background-position: right 20px center;
+
+              a {
+                color: $gray-light;
+                padding: 0;
+                font-size: 1rem;
+              }
+
+              &.active {
+                a {
+                  border: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .nav-search {
+          position: absolute;
+          top: 0px;
+          right: 40px;
+          padding: 0;
+          z-index: 1000;
+
+          form {
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
+            opacity: 1;
+            top: 10px;
+            padding: 0;
+
+            input {
+              width: 100%;
+              background: $gray-lighter;
+              max-width: 100%;
+              height: 50px;
+              padding-left: 20px;
+            }
+          }
+
+          .toggle {
+            right: 12px;
+            top: 17px;
+            padding: 0;
+          }
+
+          &.open {
+            .toggle {
+              &.close {
+                display: none;
+              }
+
+              &.open {
+                top: 20px;
+                i {
+                  color: $white;
+                }
+              }
+            }
+          }
+
+        }
+
+        &.open {
+          // transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  @include respond-below(md) {
+    .wrapper {
+      .off-canvas {
+        width: calc(100% - 60px);
+
+        .nav-search {
+          right: 10px;
+          left: 10px;
+        }
+      }
+    }
+  }
+
+  &.relative {
+    background: $black;
+    position: relative;
+    top: auto;
+  }
+}

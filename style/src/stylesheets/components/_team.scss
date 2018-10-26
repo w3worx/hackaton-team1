@@ -1,0 +1,17 @@
+#team {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .avatars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .avatar {
+      flex: 1 0 50%;
+      display: flex;
+    }
+  }
+}

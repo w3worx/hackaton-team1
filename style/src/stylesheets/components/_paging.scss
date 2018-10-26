@@ -1,0 +1,57 @@
+.paging {
+  .page-numbers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span, a {
+        background: $gray-lighter;
+        display: inline-block;
+        padding: 15px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        transition: background 400ms;
+
+        &.current,
+        &:hover {
+          background-color: $secondary-color;
+          color: $white;
+        }
+
+        &.next,
+        &.prev {
+          width: auto;
+        }
+
+      }
+    }
+  }
+
+  &.center {
+    .wrapper {
+      text-align: center;
+
+      .page-numbers {
+        margin: 0 auto;
+        display: inline-block;
+      }
+    }
+  }
+  &.right {
+    .wrapper {
+      .page-numbers {
+        float: right;
+      }
+    }
+  }
+}

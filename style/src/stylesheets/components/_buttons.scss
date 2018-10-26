@@ -1,0 +1,11 @@
+// Buttons
+// --------------------------------------------------
+
+.button {
+  @include button;
+
+  &.green {
+    background: $primary-color;
+    color: $white;
+  }
+}

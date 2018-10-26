@@ -1,0 +1,88 @@
+// Reboot
+// --------------------------------------------------
+
+::selection {
+  color: $selection-color;
+  background: $selection-bg;
+}
+
+*,
+input[type="search"] {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+html {
+  font-size: $font-size-min;
+
+  @include respond-above(md) {
+    font-size: ($font-size-min + $font-size-max) / 2;
+  }
+
+  @include respond-above(lg) {
+    font-size: $font-size-max;
+  }
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height;
+  margin: 0;
+}
+
+a {
+  color: $link-color;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  font-size: 3rem;
+  color: $primary-color;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+embed,
+img,
+object,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

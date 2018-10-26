@@ -1,0 +1,30 @@
+// Inputs
+// --------------------------------------------------
+
+// Textfields
+input {
+  &[type=date],
+  &[type=text],
+  &[type=email],
+  &[type=url],
+  &[type=search],
+  &[type=password],
+  &[type=tel] {
+    @extend %input-text;
+
+    border-radius: 0;
+    border-color: $gray-lighter;
+  }
+}
+
+//Textarea
+textarea {
+  border-color: $gray-lighter;
+  width: 100%;
+  max-width: 400px;
+}
+
+// Selects
+select {
+  @extend %input-select;
+}
