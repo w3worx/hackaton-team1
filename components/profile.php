@@ -5,7 +5,7 @@
         <img src="style/public/images/wilco.jpg" alt="avatar">
       </div>
       <div class="rank"></div>
-      <div class="name">Mathijs de Bruin</div>
+      <div class="name">Wilco van Meppel</div>
       <div class="rank-name">Level: Desk Recruit</div>
     </div>
     <div class="button-group">

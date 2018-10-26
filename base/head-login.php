@@ -1,8 +1,9 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['login'])) {
-    header('LOCATION:index.php'); die();
-  }
+    session_start();
+    echo isset($_SESSION['login']);
+    if(isset($_SESSION['login'])) {
+      header('LOCATION:profile.php'); die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
